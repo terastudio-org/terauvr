@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "terauvr"
 version = "1.0.0"
 authors = [
-    {name = "terastudio-org/terastudio", email = "contact@terastudio.org"}
+    {name = "terastudio-org/terastudio"}
 ]
 description = "Advanced AI-powered VR/AR audio separation and processing toolkit"
 readme = "README.md"
@@ -77,10 +77,11 @@ Source = "https://github.com/terastudio-org/terauvr"
 terauvr = "terauvr.cli:main"
 
 [tool.setuptools]
-packages = ["terauvr"]
+# Option 1: Use packages.find for automatic package discovery (recommended)
+packages.find = {}
 
-[tool.setuptools.package-dir]
-"" = "terauvr"
+# Option 2: OR explicitly list packages (if you don't want automatic discovery)
+# packages = ["terauvr"]
 
 [tool.setuptools.package-data]
 "*" = ["*.json", "*.bin", "*.txt", "*.md", "*.yaml", "*.yml", "*.py", "*.dll", "*.exe"]
