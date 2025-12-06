@@ -17,8 +17,8 @@ from rich.table import Table
 from rich.progress import Progress, SpinnerColumn, TextColumn
 from rich.panel import Panel
 
-from terauvr.utils.device_manager import detect_devices, get_recommended_device, get_best_device
-from terauvr.configs.config_manager import get_config_manager
+from terauvr.utils import detect_devices, get_recommended_device, get_best_device
+from terauvr.configs import get_config_manager
 
 
 console = Console()
