@@ -17,16 +17,15 @@ from rich.table import Table
 from rich.progress import Progress, SpinnerColumn, TextColumn
 from rich.panel import Panel
 
-from .. import __version__
-from ..utils.device_manager import detect_devices, get_recommended_device, get_best_device
-from ..configs.config_manager import get_config_manager
+from terauvr.utils.device_manager import detect_devices, get_recommended_device, get_best_device
+from terauvr.configs.config_manager import get_config_manager
 
 
 console = Console()
 
 
 @click.group()
-@click.version_option(version=__version__)
+
 @click.option(
     "--verbose", "-v",
     is_flag=True,
